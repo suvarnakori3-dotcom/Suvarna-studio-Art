@@ -1,0 +1,28 @@
+function openImage(src){
+document.getElementById("lightbox").style.display = "flex";
+document.getElementById("previewImage").src = src;
+}
+
+function closeImage(){
+document.getElementById("lightbox").style.display = "none";
+}
+
+window.onscroll = function(){
+
+const topBtn = document.getElementById("topBtn");
+
+if(document.documentElement.scrollTop > 300){
+topBtn.style.display = "block";
+}
+else{
+topBtn.style.display = "none";
+}
+
+};
+
+function scrollTopPage(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
